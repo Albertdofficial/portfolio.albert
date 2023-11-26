@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background-image: url('img/bg-img.jpg') no-repeat center center cover;
+  background-color: #252839;
+  /* background: #333; */
+  color: #ccc;
+}
+
+/* Navigation */
+.profile-photo {
+  width: 10rem;
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  border-radius: 10rem;
+  height: 10rem;
+}
+
+.burger{
+  fill: white;
+}
+
+nav{
+  background-color: #14183F;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+
+nav ul{
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li{
+  height: 10rem;
+}
+
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  color: white;
+  align-items: center;
+  font-size: 2rem;
+}
+
+nav a:hover{
+  color: blue;
+}
+
+nav li:first-child{
+  margin-right: auto;
+}
+
+.hr-line {
+  border: 1px dotted gray;
+}
+
+/* SIDEBAR */
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: #b7b3b3ec;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li{
+  width: 100%;
+  color: #14183F;;
+}
+
+.sidebar a{
+  width: 100%;
+}
+
+
+.intro-msg {
+  font-size: 4rem;
+  margin-left: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* height: auto; */
+  padding: 0 1.6rem;
+  margin-left: 2rem;
+}
+
+.container h1{
+  font-size: 4rem;
+}
+
+h1,
+h2 {
+  font-weight: 200;
+  margin: 0.4rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+
+/*  Cursor */
+.txt-type .txt {
+  padding: 0 0.5rem;
+  font-size: 8rem;
+  font-weight: 900;
+  color: #e6264c;
+}
+
+.txt::after{
+  content: '';
+  padding-left: .5rem;
+  border-right: 0.5rem solid gray;
+}
+
+/* Projects Container */
+.projects-container {
+  display: flex;
+  flex-direction: row;
+}
+.experience {
+  margin-left: 2rem;
+  width: 60vw;
+  color: rgb(190, 189, 189);
+  letter-spacing: 0.1rem;
+}
+
+.experience p {
+  font-size: 2rem;
+  line-height: 4rem;
+  width: 80%;
+  margin-left: 2rem;
+  box-shadow: 1px 1px 1px 2px #3b4160;
+  padding: 2rem;
+}
+
+.projects-link {
+  color: crimson;
+}
+
+.projects-link:hover {
+  filter: brightness(120%);
+}
+
+/* SLIDER */
+
+.carousel {
+  margin-top: 2rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: 250px;
+  width: 400px;
+  margin-right: 2rem;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.image-container {
+  display: flex;
+  /* moving it along the x axis */
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+.img button {
+  width: 40rem;
+}
+
+.img a {
+  text-decoration: none;
+  color: #da5252;
+  font-size: 5rem;
+}
+
+
+.circle {
+  width: 12rem;
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  animation: bounce 50s linear infinite;
+}
+
+/* Resume */
+.resume{
+  margin-top: 5rem;
+  margin-left: 4rem;
+}
+
+.resume h1{
+  font-size: 3rem;
+}
+.resume button{
+  font-size: 2rem;
+  border-radius: 2rem;
+  border: 4px solid green;
+  width: 12rem;
+  padding: .5rem;
+  color: green
+}
+.resume button:hover{
+  color:  #14183F;
+  filter: brightness(120%)
+}
+
+
+/* Contact */
+#contact{
+  margin-left: 3rem;
+  min-height: 20rem;
+}
+
+#contact span{
+  margin-top: 4rem;
+  display: inline-block;
+  font-size: 4rem;
+  margin-left: 2rem;
+}
+
+#contact span a{
+  margin-left: 2rem;
+}
+
+@keyframes bounce {
+  0% {
+    color: skyblue;
+    right: 0;
+    top: 1rem;
+  }
+
+  50% {
+    right: 1150px;
+    top:1rem;
+  }
+
+  100%{
+    right: 0;
+    color:gray;
+    top:1rem;
+  }
+}
+
+/* media queries */
+@media (max-width: 1024px) {
+  .txt-type .txt {
+    font-size: 6rem;
+  }
+  .container h1{
+    line-height: 8rem;
+  }
+  .projects-container {
+    flex-direction: column;
+  }
+  .experience{
+    width: 100%;
+  }
+  .carousel{
+    align-self: center;
+  }
+  .profile-photo{
+  
+    height: 10rem;
+  }
+}
+
+@media(max-width: 501px){
+
+    /* .sidebar{
+      display: flex;
+    } */
+          
+    .nav-links {
+      flex-direction: column;
+    }
+    .nav-link{
+      font-size: 2rem;
+    }
+
+    .container h1{
+      line-height: 4rem;
+      font-size: 2rem;
+    }
+    
+    .txt-type .txt {
+    font-size: 4rem;
+  }
+    .intro-msg{
+      font-size: 2rem;
+    }
+
+    .carousel{
+      width: 95%;
+      margin: 2rem 0;
+    }
+
+    .experience h2{
+      font-size: 3rem;
+    }
+    
+  }
