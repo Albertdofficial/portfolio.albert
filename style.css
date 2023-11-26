@@ -181,7 +181,7 @@ h1 {
 }
 
 
-.circle {
+.cloud {
   width: 12rem;
   position: absolute;
   right: 0;
@@ -209,6 +209,7 @@ h1 {
   margin-top: 5rem;
   margin-left: 4rem;
   min-height: 30rem;
+  margin-bottom: 4rem;
 }
 
 
@@ -295,6 +296,9 @@ h1 {
   .links h1:first-child{
     margin-top: 2rem;
     margin-left: 3rem;
+  }
+  .cloud{
+    display: none;
   }
 
 }
